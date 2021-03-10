@@ -132,6 +132,7 @@ function getNextStatus(mole) {
     case 'hungry':
       mole.next = getSadInterval();
       mole.status = 'sad';
+      mole.node.children[0].classList.remove('hungry');
       if(mole.king) {
         mole.node.children[0].src = 'Asset/mole-game/king-mole-sad.png';
       } else {
