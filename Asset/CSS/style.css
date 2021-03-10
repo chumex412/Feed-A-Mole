@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .img-fluid {
@@ -56,8 +56,8 @@ body {
 }
 
 .hole {
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
   margin: 0 auto;
   background-color: #000;
   border-radius: 50%;
@@ -86,14 +86,18 @@ body {
 
 .worm-container {
   overflow: hidden;
+  transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
 }
 
 .worm {
-  width: 166rem;
+  width: 155rem;
 }
 
 .worm-box {
-  width: 166rem;
+  width: 155rem;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 480px) {
