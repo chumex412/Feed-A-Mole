@@ -14,12 +14,16 @@
 
 html {
   font-size: 62.5%;
-  background-color: rgb(192, 200, 109);
 }
 
 body {
   font-size: 1rem;
   cursor: url(../mole-game/cursor.png), default;
+  background-color: rgb(192, 200, 109);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .img-fluid {
@@ -85,7 +89,7 @@ body {
 }
 
 .worm {
-  width: 166rem
+  width: 166rem;
 }
 
 .worm-box {
