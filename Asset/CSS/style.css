@@ -1,0 +1,187 @@
+/* CSS Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Browser Default Reset */
+
+html {
+  font-size: 62.5%;
+  background-color: rgb(192, 200, 109);
+}
+
+body {
+  font-size: 1rem;
+  cursor: url(../mole-game/cursor.png), default;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  --columns: 6;
+}
+
+[class*="col-"] {
+  --width: 6;
+  --init-gap: 1%;
+  --gap: calc((var(--columns, 6) - var(--width, 0)) * var(--init-gap));
+  --init-basis: calc(var(--width, 0) / var(--columns, 6) * 100%);
+  flex-basis: calc(var(--init-basis) - var(--gap));
+}
+
+.bg {
+  text-align: center;
+  background-image: url(../mole-game/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 108rem;
+}
+
+.hole {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.hole-container {
+  width: 25%;
+}
+
+.gone {
+  display: none;
+}
+
+.hungry {
+  cursor: url(../mole-game/cursor-worm.png), pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.win {
+  width: 100%;
+  height: 100vh;
+}
+
+.worm-container {
+  overflow: hidden;
+}
+
+.worm {
+  width: 166rem
+}
+
+.worm-box {
+  width: 166rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .col-1,
+  .col-2,
+  .col-3 {
+    --width: 3;
+  }
+
+  .col-4,
+  .col-5,
+  .col-6 {
+    --width: 6;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row {
+    --columns: 9;
+  }
+  
+  [class*="col-"] {
+    --width: 9;
+  }
+
+  .col-1 {
+    --width: 1;
+  }
+
+  .col-2 {
+    --width: 2;
+  }
+
+  .col-3 {
+    --width: 3;
+  }
+
+  .col-4 {
+    --width: 4;
+  }
+
+  .col-5 {
+    --width: 5;
+  }
+
+  .col-6 {
+    --width: 6;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .hole {
+    width: 23.4rem;
+    height: 23.4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hole {
+    width: 26.7rem;
+    height: 26.7rem;
+  }
+
+  .row {
+    --columns: 10;
+  }
+
+  [class*="col-"] {
+    --width: 10;
+  }
+
+  .col-1 {
+    --width: 1;
+  }
+
+  .col-2 {
+    --width: 2;
+  }
+
+  .col-3 {
+    --width: 3;
+  }
+
+  .col-4 {
+    --width: 4;
+  }
+
+  .col-5 {
+    --width: 5;
+  }
+
+  .col-6 {
+    --width: 6;
+  }
+}
