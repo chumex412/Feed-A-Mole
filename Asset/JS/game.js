@@ -171,6 +171,10 @@ function getFedstate(e) {
   if(scores === 10) {
     win();
   }
+
+  // Add to the worm-container width to display more of the worm
+  const wormContainer = document.querySelector('.worm-container');
+  wormContainer.style.width = `${10 * scores}%`;
 }
 
 function win() {
