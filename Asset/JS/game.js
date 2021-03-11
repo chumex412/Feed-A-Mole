@@ -157,8 +157,6 @@ function getFedstate(e) {
   mole.status = 'fed';
   mole.next = getSadInterval();
   
-  mole.node.children[0].classList.remove('hungry');
-  
   if(mole.king) {
     mole.node.children[0].src = 'Asset/mole-game/king-mole-fed.png';
     //increment the value of score by 2 after feeding a mole
@@ -169,7 +167,7 @@ function getFedstate(e) {
     scores++;
   }
 
-  if(scores === 10) {
+  if(scores >= 10) {
     win();
   }
 
